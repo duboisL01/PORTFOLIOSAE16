@@ -3,28 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Projet 1 | Lucas DUBOIS</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
 <body>
     <nav>
         <div class="logo">LD.<span>RT</span></div>
-        <a href="index.html" class="back-link">← Accueil</a>
+        <a href="../index.html" class="back-link" style="color: var(--cyan); text-decoration: none;">← Accueil</a>
     </nav>
+
     <section class="sae-detail">
-        <span class="code">Projet 1</span>
+        <span class="code" style="color: var(--cyan); font-family: monospace;">PROJET 1</span>
         <h1>Hygiène Informatique & Cybersécurité</h1>
-        <div class="reflexion-box">
-            <h3>Analyse Technique</h3>
-            <p>Étude du durcissement SSH. Passage à l'authentification par clés <strong>Ed25519</strong> selon les recommandations de l'<strong>ANSSI</strong> pour supprimer les accès par mot de passe vulnérables.</p>
+        
+        <div class="reflexion-box" style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+            <h3 style="color: #fff;">Analyse Technique : Sécurisation et Hygiène</h3>
+            <p>Ce projet s'est concentré sur la mise en œuvre des bonnes pratiques de sécurité informatique. Mon travail a porté sur plusieurs axes majeurs :</p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.6;">
+                <li><strong>Gestion des droits et privilèges :</strong> Configuration des utilisateurs et des permissions sous Linux pour respecter le principe du moindre privilège.</li>
+                <li><strong>Durcissement des services :</strong> Configuration du service SSH pour limiter les vecteurs d'attaque (désactivation du login Root, modification des méthodes d'accès).</li>
+                <li><strong>Analyse de vulnérabilités :</strong> Utilisation d'outils d'audit (Wireshark, Nmap, Netstat) pour identifier les faiblesses d'un système et application des correctifs (mises à jour, fermeture de ports inutiles).</li>
+                <li><strong>Sensibilisation à l'hygiène numérique :</strong> Mise en place de mesures de protection des données et compréhension des risques liés aux menaces actuelles (phishing, brute force).</li>
+            </ul>
         </div>
-        <div class="quick-nav">
-            <a href="sae11.html" class="btn-nav nav-active">Projet 1</a>
-            <a href="sae12.html" class="btn-nav">Projet 2</a>
-            <a href="sae13.html" class="btn-nav">Projet 3</a>
-            <a href="sae14.html" class="btn-nav">Projet 4</a>
-            <a href="sae15.html" class="btn-nav">Projet 5</a>
+
+        <div class="anssi-box" style="background: rgba(100, 255, 218, 0.05); padding: 25px; border-radius: 8px; border: 1px solid var(--cyan); margin: 30px 0;">
+            <h3 style="color: var(--cyan); margin-top: 0;">🛡️ Certification : SecNumAcadémie</h3>
+            <p>En parallèle de mes travaux techniques, j'ai validé l'intégralité du MOOC <strong>SecNumAcadémie</strong> dispensé par l'ANSSI. Ce parcours m'a permis de consolider mes connaissances sur les bases fondamentales de la cybersécurité :</p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.8;">
+                <li><strong>Panorama de la SSI :</strong> Compréhension des menaces et enjeux actuels.</li>
+                <li><strong>Sécurité de l'authentification :</strong> Gestion robuste des mots de passe et identités.</li>
+                <li><strong>Sécurité sur Internet :</strong> Protection des flux web et protocoles sécurisés.</li>
+                <li><strong>Sécurité du poste de travail :</strong> Chiffrement et bonnes pratiques en mobilité.</li>
+            </ul>
+            <p style="font-style: italic; font-size: 0.9rem; color: var(--slate); margin-top: 15px;">Note : Certification obtenue avec succès. Attestation disponible sur demande (Portail ANSSI actuellement en maintenance).</p>
+        </div>
+
+        <div class="quick-nav" style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
+            <a href="sae11.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: var(--cyan); color: var(--bg);">Projet 1</a>
+            
+            <a href="sae12.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 2</a>
+            
+            <a href="sae13.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 3</a>
+            
+            <a href="sae14.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 4</a>
+            
+            <a href="sae15.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 5</a>
         </div>
     </section>
-    <footer><p>&copy; 2026 - Lucas DUBOIS - BUT Réseaux et Télécommunications IUT de Caen</p></footer>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--slate); font-size: 0.8rem; border-top: 1px solid rgba(100,255,218,0.1); margin-top: 50px;">
+        <p>&copy; 2026 - Lucas DUBOIS - BUT Réseaux et Télécommunications IUT de Caen</p>
+    </footer>
 </body>
 </html>

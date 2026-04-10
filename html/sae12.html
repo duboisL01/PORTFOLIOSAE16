@@ -3,28 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Projet 2 | Lucas DUBOIS</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
 <body>
     <nav>
         <div class="logo">LD.<span>RT</span></div>
-        <a href="index.html" class="back-link">← Accueil</a>
+        <a href="../index.html" class="back-link" style="color: var(--cyan); text-decoration: none;">← Accueil</a>
     </nav>
+
     <section class="sae-detail">
-        <span class="code">Projet 2</span>
+        <span class="code" style="color: var(--cyan); font-family: monospace;">PROJET 2 (SAÉ 1.02)</span>
         <h1>S'initier aux réseaux informatiques</h1>
-        <div class="reflexion-box">
-            <h3>Analyse Technique</h3>
-            <p>Mise en place du <strong>VLAN 696</strong> natif pour sécuriser les ports inutilisés. Tests de performance réalisés avec <strong>Iperf3</strong> pour valider l'agrégation de liens.</p>
+        
+        <div class="reflexion-box" style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+            <h3 style="color: #fff;">🌐 Conception et Architecture Réseau</h3>
+            <p>Le projet a débuté par la conception d'une infrastructure LAN multi-VLAN. J'ai réalisé les schémas physique et logique pour structurer le déploiement :</p>
+            <div style="display: flex; gap: 15px; margin: 15px 0; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <img src="../Images/Schéma-physique-TD1-GRP3.png" alt="Schéma Physique" style="width: 100%; border-radius: 4px; border: 1px solid var(--slate);">
+                    <p style="font-size: 0.8rem; color: var(--slate); text-align: center;">Architecture Physique (Câblage & Matériel)</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <img src="../Images/Schéma-logiqueTD1-GRP3.png" alt="Schéma Logique" style="width: 100%; border-radius: 4px; border: 1px solid var(--slate);">
+                    <p style="font-size: 0.8rem; color: var(--slate); text-align: center;">Architecture Logique (VLANs & Adressage IP)</p>
+                </div>
+            </div>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.6;">
+                <li>Mise en œuvre du <strong>VLAN 696</strong> (VLAN natif) pour la sécurité.</li>
+                <li>Configuration du <strong>RSTP</strong> et de l'agrégation de liens (Etherchannel).</li>
+            </ul>
         </div>
-        <div class="quick-nav">
-            <a href="sae11.html" class="btn-nav">Projet 1</a>
-            <a href="sae12.html" class="btn-nav nav-active">Projet 2</a>
-            <a href="sae13.html" class="btn-nav">Projet 3</a>
-            <a href="sae14.html" class="btn-nav">Projet 4</a>
-            <a href="sae15.html" class="btn-nav">Projet 5</a>
+
+        <div class="reflexion-box" style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+            <h3 style="color: #fff;">💻 Services Debian : Stockage & Partage</h3>
+            <p>J'ai configuré un serveur Debian pour assurer les services de stockage et de partage de fichiers de l'entreprise :</p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.6;">
+                <li><strong>Système de fichiers XFS :</strong> Utilisation du format XFS sur les disques de données (partition <code>sdc1</code>) pour permettre des sauvegardes incrémentales avancées.</li>
+                <li><strong>Partage Samba :</strong> Configuration du fichier <code>smb.conf</code> avec gestion des dossiers personnels (homes) et d'un dossier commun sécurisé.</li>
+                <li><strong>Sécurisation SSH :</strong> Accès distant restreint via clés RSA/Ed25519 conformément aux audits Wireshark effectués.</li>
+            </ul>
+            <a href="../documents/preuves.pdf" target="_blank" class="btn-cv" style="display: inline-block; margin-top: 10px; text-decoration: none; padding: 8px 15px; font-size: 0.9rem;">📂 Voir le Dossier de Preuves Complet (PDF)</a>
+        </div>
+
+        <div class="anssi-box" style="background: rgba(100, 255, 218, 0.05); padding: 25px; border-radius: 8px; border: 1px solid var(--cyan); margin: 30px 0;">
+            <h3 style="color: var(--cyan); margin-top: 0;">🎓 Certification : Cisco NetAcad ITN</h3>
+            <p>Validation du module <strong>Introduction aux Réseaux (CCNA1)</strong> couvrant le modèle OSI, l'Ethernet, et l'adressage IPv4/IPv6. Ce socle théorique a été indispensable pour la réussite du TP noté (CLI Cisco & Linux).</p>
+        </div>
+
+        <div class="quick-nav" style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
+            <a href="sae11.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 1</a>
+            <a href="sae12.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: var(--cyan); color: var(--bg);">Projet 2</a>
+            <a href="sae13.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 3</a>
+            <a href="sae14.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 4</a>
+            <a href="sae15.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 5</a>
         </div>
     </section>
-    <footer><p>&copy; 2026 - Lucas DUBOIS - BUT Réseaux et Télécommunications IUT de Caen</p></footer>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--slate); font-size: 0.8rem; border-top: 1px solid rgba(100,255,218,0.1); margin-top: 50px;">
+        <p>&copy; 2026 - Lucas DUBOIS - BUT Réseaux et Télécommunications IUT de Caen</p>
+    </footer>
 </body>
 </html>
