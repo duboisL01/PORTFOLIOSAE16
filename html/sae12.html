@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Projet 2 | Lucas DUBOIS</title>
     <link rel="stylesheet" href="../Css/style.css">
 </head>
+
 <body>
     <nav>
         <div class="logo">LD.<span>RT</span></div>
@@ -14,49 +16,68 @@
     <section class="sae-detail">
         <span class="code" style="color: var(--cyan); font-family: monospace;">PROJET 2 (SAÉ 1.02)</span>
         <h1>S'initier aux réseaux informatiques</h1>
-        
-        <div class="reflexion-box" style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
             <h3 style="color: #fff; margin-top: 0; font-weight: 600;">🌐 Conception et Architecture Réseau</h3>
-            <p style="margin-bottom: 25px; color: var(--slate);">Le déploiement de cette infrastructure a nécessité une phase de conception rigoureuse pour garantir la performance et la sécurité du LAN :</p>
-            
+            <p style="margin-bottom: 25px; color: var(--slate);">Le déploiement de cette infrastructure a nécessité une
+                phase de conception rigoureuse pour garantir la performance et la sécurité du LAN :</p>
+
             <div style="display: flex; flex-direction: column; gap: 35px; align-items: center;">
-                
-                <div style="width: 50%; min-width: 300px; background: rgba(0,0,0,0.2); border: 1px solid rgba(100, 255, 218, 0.1); border-radius: 8px; overflow: hidden;">
+
+                <div
+                    style="width: 50%; min-width: 300px; background: rgba(0,0,0,0.2); border: 1px solid rgba(100, 255, 218, 0.1); border-radius: 8px; overflow: hidden;">
                     <a href="../Images/Schéma-physique-TD1-GRP3.png" target="_blank">
-                        <img src="../Images/Schéma-physique-TD1-GRP3.png" alt="Schéma Physique" 
-                             style="width: 100%; height: auto; display: block; border-bottom: 1px solid rgba(100, 255, 218, 0.1);">
+                        <img src="../Images/Schéma-physique-TD1-GRP3.png" alt="Schéma Physique"
+                            style="width: 100%; height: auto; display: block; border-bottom: 1px solid rgba(100, 255, 218, 0.1);">
                     </a>
                     <div style="padding: 15px;">
-                        <h4 style="color: var(--cyan); margin: 0 0 10px 0; font-size: 0.9rem;">Architecture Physique (Couche 1)</h4>
+                        <h4 style="color: var(--cyan); margin: 0 0 10px 0; font-size: 0.9rem;">Architecture Physique
+                            (Couche 1)</h4>
                         <p style="font-size: 0.85rem; color: var(--slate); line-height: 1.5; margin: 0;">
-                            Ce schéma définit la <strong>topologie matérielle</strong>. Il inventorie les équipements (Switch 2960, Routeur 4321) et précise les interfaces utilisées (GigabitEthernet, FastEthernet). L'objectif est de documenter le média de transmission (cuivre) et de mettre en évidence l'<strong>agrégation de liens (EtherChannel)</strong> pour doubler la bande passante entre les commutateurs tout en évitant les points de défaillance uniques.
+                            Ce schéma définit la <strong>topologie matérielle</strong>. Il inventorie les équipements
+                            (Switch 2960, Routeur 4321) et précise les interfaces utilisées (GigabitEthernet,
+                            FastEthernet). L'objectif est de documenter le média de transmission (cuivre) et de mettre
+                            en évidence l'<strong>agrégation de liens (EtherChannel)</strong> pour doubler la bande
+                            passante entre les commutateurs tout en évitant les points de défaillance uniques.
                         </p>
                     </div>
                 </div>
 
-                <div style="width: 50%; min-width: 300px; background: rgba(0,0,0,0.2); border: 1px solid rgba(100, 255, 218, 0.1); border-radius: 8px; overflow: hidden;">
+                <div
+                    style="width: 50%; min-width: 300px; background: rgba(0,0,0,0.2); border: 1px solid rgba(100, 255, 218, 0.1); border-radius: 8px; overflow: hidden;">
                     <a href="../Images/Schéma-logiqueTD1-GRP3.png" target="_blank">
-                        <img src="../Images/Schéma-logiqueTD1-GRP3.png" alt="Schéma Logique" 
-                             style="width: 100%; height: auto; display: block; border-bottom: 1px solid rgba(100, 255, 218, 0.1);">
+                        <img src="../Images/Schéma-logiqueTD1-GRP3.png" alt="Schéma Logique"
+                            style="width: 100%; height: auto; display: block; border-bottom: 1px solid rgba(100, 255, 218, 0.1);">
                     </a>
                     <div style="padding: 15px;">
-                        <h4 style="color: var(--cyan); margin: 0 0 10px 0; font-size: 0.9rem;">Architecture Logique (Couches 2 & 3)</h4>
+                        <h4 style="color: var(--cyan); margin: 0 0 10px 0; font-size: 0.9rem;">Architecture Logique
+                            (Couches 2 & 3)</h4>
                         <p style="font-size: 0.85rem; color: var(--slate); line-height: 1.5; margin: 0;">
-                            Ce document détaille la <strong>segmentation par VLANs</strong> (Virtual LANs) pour isoler les flux (Administration, Data, WiFi). Il précise le plan d'adressage IP (sous-réseaux, masques de sous-réseau) et les adresses des passerelles par défaut. On y voit également la configuration des <strong>liens Trunks (802.1Q)</strong> essentiels pour transporter plusieurs réseaux logiques sur un seul câble physique.
+                            Ce document détaille la <strong>segmentation par VLANs</strong> (Virtual LANs) pour isoler
+                            les flux (Administration, Data, WiFi). Il précise le plan d'adressage IP (sous-réseaux,
+                            masques de sous-réseau) et les adresses des passerelles par défaut. On y voit également la
+                            configuration des <strong>liens Trunks (802.1Q)</strong> essentiels pour transporter
+                            plusieurs réseaux logiques sur un seul câble physique.
                         </p>
                     </div>
                 </div>
 
             </div>
 
-            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.6; margin-top: 25px; font-size: 0.95rem;">
-                <li><strong>VLAN Natif (696) :</strong> Utilisé pour sécuriser les trames non étiquetées sur les trunks.</li>
-                <li><strong>Protocole RSTP :</strong> Configuration du Rapid Spanning Tree pour assurer une convergence réseau rapide en cas de coupure d'un lien.</li>
-                <li><strong>Sécurité des ports :</strong> Désactivation des interfaces inutilisées et limitation des adresses MAC par port.</li>
+            <ul
+                style="color: var(--slate); padding-left: 20px; line-height: 1.6; margin-top: 25px; font-size: 0.95rem;">
+                <li><strong>VLAN Natif (696) :</strong> Utilisé pour sécuriser les trames non étiquetées sur les trunks.
+                </li>
+                <li><strong>Protocole RSTP :</strong> Configuration du Rapid Spanning Tree pour assurer une convergence
+                    réseau rapide en cas de coupure d'un lien.</li>
+                <li><strong>Sécurité des ports :</strong> Désactivation des interfaces inutilisées et limitation des
+                    adresses MAC par port.</li>
             </ul>
         </div>
 
-        <div class="reflexion-box" style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
             <h3 style="color: #fff;">Services Debian : Stockage & Partage</h3>
             <p>J'ai configuré un serveur Debian pour assurer les services de stockage et de partage de fichiers :</p>
             <ul style="color: var(--slate); padding-left: 20px; line-height: 1.6;">
@@ -64,23 +85,37 @@
                 <li><strong>Partage Samba :</strong> Gestion des dossiers personnels et communs.</li>
                 <li><strong>Sécurisation SSH :</strong> Audit via Wireshark et conformité ANSSI.</li>
             </ul>
-            
-            <a href="/documents/preuves.pdf" target="_blank" class="btn-cv" style="display: inline-block; margin-top: 15px; text-decoration: none; padding: 12px 20px; border-radius: 4px; background: var(--cyan); color: var(--bg); font-weight: bold; font-size: 0.9rem;">
+
+            <a href="/documents/preuves.pdf" target="_blank" class="btn-cv"
+                style="display: inline-block; margin-top: 15px; text-decoration: none; padding: 12px 20px; border-radius: 4px; background: var(--cyan); color: var(--bg); font-weight: bold; font-size: 0.9rem;">
                 Consulter le Dossier de Preuves (PDF)
             </a>
         </div>
 
-        <div class="anssi-box" style="background: rgba(100, 255, 218, 0.05); padding: 25px; border-radius: 8px; border: 1px solid var(--cyan); margin: 30px 0;">
+        <div class="anssi-box"
+            style="background: rgba(100, 255, 218, 0.05); padding: 25px; border-radius: 8px; border: 1px solid var(--cyan); margin: 30px 0;">
             <h3 style="color: var(--cyan); margin-top: 0;">Formation Cisco : Introduction aux Réseaux</h3>
-            <p>Suivi complet des modules théoriques <strong>Cisco CCNA 1 (ITN)</strong>. Cette formation couvre le modèle OSI, l'adressage IP et la configuration CLI.</p>
+            <p>Suivi complet des modules théoriques <strong>Cisco CCNA 1 (ITN)</strong>. Cette formation couvre le
+                modèle OSI, l'adressage IP et la configuration CLI.</p>
         </div>
 
-        <div class="quick-nav" style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
-            <a href="sae11.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 1</a>
-            <a href="sae12.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: var(--cyan); color: var(--bg);">Projet 2</a>
-            <a href="sae13.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 3</a>
-            <a href="sae14.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 4</a>
-            <a href="sae15.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 5</a>
+        <div class="quick-nav"
+            style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
+            <a href="sae11.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet
+                1</a>
+            <a href="sae12.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: var(--cyan); color: var(--bg);">Projet
+                2</a>
+            <a href="sae13.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet
+                3</a>
+            <a href="sae14.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet
+                4</a>
+            <a href="sae15.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet
+                5</a>
         </div>
     </section>
 
@@ -95,4 +130,5 @@
         <p>&copy; 2026 - Lucas DUBOIS - BUT Réseaux et Télécommunications IUT de Caen</p>
     </footer>
 </body>
+
 </html>
