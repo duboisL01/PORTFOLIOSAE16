@@ -28,7 +28,7 @@ nav a:hover, .nav-active { color: var(--cyan); }
 .hero-content { z-index: 10; padding: 20px; }
 .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 10px 0; color: #fff; }
 .highlight-text { color: var(--cyan); text-shadow: 0 0 15px rgba(100, 255, 218, 0.3); }
-.cyber-tag { color: var(--cyan); font-family: monospace; font-size: 1.1rem; letter-spacing: 2px; }
+.cyber-tag { color: var(--cyan); font-family: monospace; font-size: 2rem; letter-spacing: 2px; }
 
 /* Profil & Bouton CV */
 .profile-container {
@@ -37,7 +37,7 @@ nav a:hover, .nav-active { color: var(--cyan); }
     margin-top: 40px;
 }
 .profile-photo {
-    width: 180px; height: 180px; border-radius: 12px;
+    width: 180px; height: 250px; border-radius: 12px;
     border: 2px solid var(--cyan); overflow: hidden;
     box-shadow: 0 0 20px rgba(100, 255, 218, 0.2); flex-shrink: 0;
 }
