@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil & Projection | Lucas DUBOIS</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <style>
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 700px) {
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .info-card h3 {
+            color: var(--cyan);
+            margin-top: 0;
+            font-size: 1rem;
+            font-family: monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(100, 255, 218, 0.08);
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            color: var(--cyan);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 4px;
+        }
+
+        .lang-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.05);
+        }
+
+        .lang-row:last-child {
+            border-bottom: none;
+        }
+
+        .progress-bar {
+            width: 120px;
+            height: 5px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--cyan);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 15px 0 15px 20px;
+            border-left: 2px solid rgba(100, 255, 218, 0.2);
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 20px;
+            width: 8px;
+            height: 8px;
+            background: var(--cyan);
+            border-radius: 50%;
+        }
+
+        .timeline-item h4 {
+            color: #ccd6f6;
+            margin: 0 0 5px 0;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--slate);
+        }
+
+        .metier-card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--cyan);
+            margin: 12px 0;
+        }
+
+        .metier-card h4 {
+            color: var(--cyan);
+            margin: 0 0 8px 0;
+        }
+
+        .metier-card p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--slate);
+        }
+
+        .photo-pro {
+            width: 140px;
+            height: 185px;
+            border-radius: 10px;
+            border: 2px solid var(--cyan);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.15);
+            flex-shrink: 0;
+        }
+
+        .photo-pro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .intro-flex {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 600px) {
+            .intro-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">LD.<span>RT</span></div>
+        <a href="../index.html" class="back-link" style="color: var(--cyan); text-decoration: none;">← Accueil</a>
+    </nav>
+
+    <section class="sae-detail">
+        <span class="code" style="color: var(--cyan); font-family: monospace;">PRÉSENTATION & PROJECTION
+            PROFESSIONNELLE</span>
+        <h1>Lucas <span style="color: var(--cyan);">DUBOIS</span></h1>
+
+        <!-- Intro -->
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 30px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+            <div class="intro-flex">
+                <div class="photo-pro">
+                    <img src="../Images/photo_de_moi.png" alt="Photo professionnelle de Lucas DUBOIS">
+                </div>
+                <div>
+                    <h3 style="color: #fff; margin-top: 0;">Étudiant en BUT Réseaux et Télécommunications</h3>
+                    <p style="color: var(--slate);">
+                        Titulaire d'un Baccalauréat Général mention <strong>Assez Bien</strong> (spécialités
+                        Physique-Chimie et Mathématiques),
+                        je poursuis mes études à l'IUT Grand Ouest Normandie – Campus III d'IFS, en formation initiale.
+                        Ce BUT me permet de développer des compétences solides en administration réseau, cybersécurité
+                        et développement d'applications
+                        pour les infrastructures de télécommunications.
+                    </p>
+                    <p style="color: var(--slate);">
+                        Curieux de nature, j'apprécie la résolution de problèmes techniques concrets. Mes projets en
+                        formation
+                        ont confirmé mon intérêt pour la <strong>cybersécurité</strong> et l'<strong>administration des
+                            systèmes</strong>,
+                        des domaines vers lesquels je souhaite m'orienter en choisissant le <strong>parcours
+                            Cyber</strong> dès la 2<sup>e</sup> année.
+                    </p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="../documents/MonCV.pdf" class="btn-cv" target="_blank"
+                            style="text-decoration: none;">Télécharger mon CV</a>
+                        <a href="https://www.linkedin.com/in/lucas-dubois-a921353a0" target="_blank" class="btn-cv"
+                            style="background: transparent; border: 1px solid var(--cyan); color: var(--cyan); text-decoration: none;">
+                            LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences & Infos -->
+        <div class="profile-grid">
+            <div class="info-card">
+                <h3>Compétences techniques</h3>
+                <span class="skill-tag">Réseaux (Cisco CLI)</span>
+                <span class="skill-tag">Linux (Debian)</span>
+                <span class="skill-tag">HTML / CSS</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SSH</span>
+                <span class="skill-tag">Wireshark</span>
+                <span class="skill-tag">Nmap</span>
+                <span class="skill-tag">Samba / Apache2</span>
+                <span class="skill-tag">VLANs / RSTP</span>
+                <span class="skill-tag">GitHub</span>
+            </div>
+            <div class="info-card">
+                <h3>Langues</h3>
+                <div class="lang-row">
+                    <span>Français</span>
+                    <span style="font-size:0.8rem; color: var(--slate);">Langue natale</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:100%"></div>
+                    </div>
+                </div>
+                <div class="lang-row">
+                    <span>Anglais</span>
+                    <span style="font-size:0.8rem; color: var(--slate);">Intermédiaire (B1)</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:55%"></div>
+                    </div>
+                </div>
+                <div class="lang-row">
+                    <span>Espagnol</span>
+                    <span style="font-size:0.8rem; color: var(--slate);">Intermédiaire (B1)</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:50%"></div>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--slate);">Permis B &nbsp;|&nbsp; Sport
+                    régulier &nbsp;|&nbsp; Nouvelles technologies</p>
+            </div>
+        </div>
+
+        <!-- Parcours formation -->
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+            <h3 style="color: #fff; margin-top: 0;">Parcours de formation</h3>
+            <div class="timeline-item">
+                <h4>2025 – Baccalauréat Général (mention Assez Bien)</h4>
+                <p>Spécialités : Physique-Chimie et Mathématiques. Base analytique solide pour aborder les notions de
+                    physique des transmissions et les mathématiques du signal.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2025 – 2026 (en cours) · BUT R&T – 1<sup>re</sup> année · IUT de Caen</h4>
+                <p>Tronc commun : administration réseau (RT1), transmission et connectivité (RT2), développement
+                    d'applications (RT3). Découverte de 5 SAÉ couvrant la cybersécurité, les réseaux, les transmissions
+                    physiques, le développement web et le traitement de données.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2026 – 2027 · BUT R&T – 2<sup>e</sup> année (projet)</h4>
+                <p>Orientation souhaitée : <strong>Parcours Cybersécurité</strong>. Développement des compétences en
+                    audit de sécurité, pentesting, administration de systèmes d'information sécurisés (Cyber 1 & Cyber
+                    2).</p>
+            </div>
+        </div>
+
+        <!-- Évolutions observées -->
+        <div class="anssi-box"
+            style="background: rgba(100,255,218,0.05); padding: 25px; border-radius: 8px; border: 1px solid var(--cyan); margin: 30px 0;">
+            <h3 style="color: var(--cyan); margin-top: 0;">Évolutions majeures observées en S1</h3>
+            <p style="color: var(--slate);">En entrant en BUT R&T, j'avais des notions très basiques en HTML/CSS et une
+                curiosité pour l'informatique sans bagage technique structuré. Au fil des SAÉ de ce premier semestre,
+                j'ai acquis des compétences concrètes qui ont transformé ma façon d'aborder les problèmes techniques :
+            </p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.8;">
+                <li><strong>Passage du « je sais que ça existe » au « je sais le configurer » :</strong> les VLANs, le
+                    RSTP ou SSH n'étaient que des acronymes avant la SAÉ 1.02 ; aujourd'hui je sais les déployer et en
+                    justifier les choix.</li>
+                <li><strong>Développement de la rigueur documentaire :</strong> rédiger un compte rendu de mesures (SAÉ
+                    1.03), un dossier de preuves (SAÉ 1.02) ou un README professionnel (SAÉ 1.04) m'ont appris
+                    l'importance de la traçabilité en milieu professionnel.</li>
+                <li><strong>Autonomie technique :</strong> les séances de projet en autonomie (sans enseignant) m'ont
+                    obligé à chercher par moi-même, à consulter les documentations officielles (ANSSI, Cisco) et à
+                    prendre des initiatives.</li>
+            </ul>
+        </div>
+
+        <!-- Projection professionnelle -->
+        <h2 style="color: #fff; margin-top: 40px;">Projection professionnelle</h2>
+        <div class="metier-card">
+            <h4>Technicien / Analyste Cybersécurité (SOC)</h4>
+            <p>Surveiller les systèmes d'information, analyser les incidents de sécurité et appliquer les mesures
+                correctives. Domaine directement en lien avec les compétences Cyber du BUT R&T.</p>
+        </div>
+        <div class="metier-card">
+            <h4>Administrateur Réseaux & Systèmes</h4>
+            <p>Concevoir, déployer et maintenir les infrastructures réseau d'une entreprise. Les SAÉ 1.01 et 1.02 m'ont
+                donné un premier aperçu concret de ce métier.</p>
+        </div>
+        <div class="metier-card">
+            <h4>Ingénieur Pentesting / Tests d'intrusion</h4>
+            <p>Évaluer la robustesse des systèmes en simulant des attaques contrôlées. Le TP CTF de la SAÉ 1.01 a
+                éveillé mon intérêt pour cette approche offensive de la sécurité.</p>
+        </div>
+        <p style="color: var(--slate); margin-top: 20px; font-style: italic;">
+            Ces orientations sont cohérentes avec le <strong>parcours Cybersécurité</strong> du BUT R&T, que je souhaite
+            intégrer en 2<sup>e</sup> année, idéalement en alternance.
+        </p>
+
+        <div class="quick-nav"
+            style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
+            <a href="sae11.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                1</a>
+            <a href="sae12.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                2</a>
+            <a href="sae13.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                3</a>
+            <a href="sae14.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                4</a>
+            <a href="bilans.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Bilans</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>Me contacter :</p>
+            <ul>
+                <li>Par mail : <a href="mailto:duboislucas14210@gmail.com">duboislucas14210@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/lucas-dubois-a921353a0" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2026 – Lucas DUBOIS – BUT Réseaux et Télécommunications · IUT de Caen</p>
+    </footer>
+</body>
+
+</html>

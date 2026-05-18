@@ -1,10 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Projet 1 | Lucas DUBOIS</title>
+    <title>SAÉ 1.01 – Cybersécurité | Lucas DUBOIS</title>
     <link rel="stylesheet" href="../Css/style.css">
+    <style>
+        .ac-section {
+            background: rgba(100, 255, 218, 0.03);
+            border: 1px solid rgba(100, 255, 218, 0.15);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .ac-badge {
+            display: inline-block;
+            background: rgba(100, 255, 218, 0.08);
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-family: monospace;
+            margin: 4px 4px 4px 0;
+            font-weight: bold;
+        }
+
+        .autoeval-box {
+            background: rgba(255, 165, 0, 0.04);
+            border-left: 4px solid #ffa500;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .autoeval-box h3 {
+            color: #ffa500;
+            margin-top: 0;
+        }
+
+        .niveau-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .niveau-label {
+            min-width: 260px;
+            font-size: 0.82rem;
+            color: var(--text);
+        }
+
+        .niveau-bg {
+            flex: 1;
+            min-width: 100px;
+            height: 5px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .niveau-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan), rgba(100, 255, 218, 0.5));
+            border-radius: 3px;
+        }
+
+        .section-label {
+            color: var(--cyan);
+            font-family: monospace;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 28px 0 8px 0;
+            display: block;
+        }
+
+        .trace-card {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            border-radius: 6px;
+            padding: 15px 18px;
+            margin: 10px 0;
+        }
+
+        .trace-card h4 {
+            color: #ccd6f6;
+            margin: 0 0 6px 0;
+            font-size: 0.9rem;
+        }
+
+        .trace-card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--slate);
+        }
+    </style>
 </head>
+
 <body>
     <nav>
         <div class="logo">LD.<span>RT</span></div>
@@ -12,42 +108,199 @@
     </nav>
 
     <section class="sae-detail">
-        <span class="code" style="color: var(--cyan); font-family: monospace;">PROJET 1</span>
-        <h1>Hygiène Informatique & Cybersécurité</h1>
-        
-        <div class="reflexion-box" style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
-            <h3 style="color: #fff;">Analyse Technique : Sécurisation et Hygiène</h3>
-            <p>Ce projet s'est concentré sur la mise en œuvre des bonnes pratiques de sécurité informatique. Mon travail a porté sur plusieurs axes majeurs :</p>
-            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.6;">
-                <li><strong>Gestion des droits et privilèges :</strong> Configuration des utilisateurs et des permissions sous Linux pour respecter le principe du moindre privilège.</li>
-                <li><strong>Durcissement des services :</strong> Configuration du service SSH pour limiter les vecteurs d'attaque (désactivation du login Root, modification des méthodes d'accès).</li>
-                <li><strong>Analyse de vulnérabilités :</strong> Utilisation d'outils d'audit (Wireshark, Nmap, Netstat) pour identifier les faiblesses d'un système et application des correctifs (mises à jour, fermeture de ports inutiles).</li>
-                <li><strong>Sensibilisation à l'hygiène numérique :</strong> Mise en place de mesures de protection des données et compréhension des risques liés aux menaces actuelles (phishing, brute force).</li>
+        <span class="code" style="color: var(--cyan); font-family: monospace;">SAÉ 1.01 · Semestre 1</span>
+        <h1>Se sensibiliser à l'hygiène informatique et à la cybersécurité</h1>
+
+        <!-- Contexte -->
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 20px 0;">
+            <h3 style="color: #fff; margin-top: 0;">Contexte et objectifs</h3>
+            <p style="color: var(--slate);">
+                Dans cette SAÉ, je me suis placé dans le rôle d'un technicien R&T chargé de <strong>sensibiliser des
+                    collaborateurs</strong> aux bonnes pratiques de sécurité numérique et d'en appliquer lui-même les
+                préceptes.
+                Le travail s'est articulé en trois axes : une auto-formation individuelle via le MOOC de l'ANSSI, un
+                travail de recherche en groupe avec présentation orale, et un TP de type Capture the Flag (CTF).
+            </p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.7;">
+                <li><strong>Format :</strong> 1h CM + 12h projet autonome + 2h TP CTF + 1h oral noté + 30min QCM</li>
+                <li><strong>Organisation :</strong> MOOC individuel ; oral en groupe de 4 étudiants</li>
+                <li><strong>Mon lot :</strong> <em>Lot C – Découverte de machines</em> (Nmap, fingerprint OS, services,
+                    versions)</li>
             </ul>
         </div>
 
-        <div class="anssi-box" style="background: rgba(100, 255, 218, 0.05); padding: 25px; border-radius: 8px; border: 1px solid var(--cyan); margin: 30px 0;">
-            <h3 style="color: var(--cyan); margin-top: 0;">Certification : SecNumAcadémie</h3>
-            <p>En parallèle de mes travaux techniques, j'ai validé l'intégralité du MOOC <strong>SecNumAcadémie</strong> dispensé par l'ANSSI. Ce parcours m'a permis de consolider mes connaissances sur les bases fondamentales de la cybersécurité :</p>
-            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.8;">
-                <li><strong>Panorama de la SSI :</strong> Compréhension des menaces et enjeux actuels.</li>
-                <li><strong>Sécurité de l'authentification :</strong> Gestion robuste des mots de passe et identités.</li>
-                <li><strong>Sécurité sur Internet :</strong> Protection des flux web et protocoles sécurisés.</li>
-                <li><strong>Sécurité du poste de travail :</strong> Chiffrement et bonnes pratiques en mobilité.</li>
-            </ul>
-            <p style="font-style: italic; font-size: 0.9rem; color: var(--slate); margin-top: 15px;">Note : Certification obtenue avec succès. Attestation disponible sur demande (Portail ANSSI actuellement en maintenance).</p>
+        <!-- AC -->
+        <span class="section-label">Apprentissages Critiques mobilisés</span>
+        <div class="ac-section">
+            <p style="color: var(--slate); font-size: 0.88rem; margin-top: 0;">Compétence <strong>RT1 – Administrer les
+                    réseaux et l'Internet</strong> (Niveau 1)</p>
+            <span class="ac-badge">AC11.04</span>
+            <span style="color: var(--slate); font-size: 0.85rem;">Maîtriser les rôles et principes fondamentaux des
+                systèmes d'exploitation pour la configuration réseau</span>
+            <br><br>
+            <span class="ac-badge">AC11.05</span>
+            <span style="color: var(--slate); font-size: 0.85rem;">Identifier les dysfonctionnements du réseau local et
+                savoir les signaler</span>
+            <br><br>
+            <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 5px;">Compétence <strong>RT3 – Créer des
+                    outils et applications pour les R&T</strong> (Niveau 1)</p>
+            <span class="ac-badge">AC13.01</span>
+            <span style="color: var(--slate); font-size: 0.85rem;">Utiliser un système informatique et ses outils</span>
         </div>
 
-        <div class="quick-nav" style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
-            <a href="sae11.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: var(--cyan); color: var(--bg);">Projet 1</a>
-            
-            <a href="sae12.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 2</a>
-            
-            <a href="sae13.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 3</a>
-            
-            <a href="sae14.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 4</a>
-            
-            <a href="sae15.html" class="btn-cv" style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Projet 5</a>
+        <!-- Tâches réalisées -->
+        <span class="section-label">Tâches réalisées</span>
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 10px 0;">
+            <h3 style="color: #fff; margin-top: 0;">1. MOOC SecNumAcadémie – ANSSI</h3>
+            <p style="color: var(--slate);">
+                J'ai suivi en autonomie l'intégralité du MOOC <strong>SecNumAcadémie</strong> proposé par l'Agence
+                Nationale de la Sécurité des Systèmes d'Information.
+                Ce parcours couvre quatre modules fondamentaux :
+            </p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.7;">
+                <li><strong>Module 1 – Panorama de la SSI :</strong> menaces, acteurs, règles d'or de la sécurité.</li>
+                <li><strong>Module 2 – B.a.-ba de l'authentification :</strong> force des mots de passe, attaques par
+                    force brute et dictionnaire, gestionnaires de mots de passe.</li>
+                <li><strong>Module 3 – Sécurité sur Internet :</strong> navigation web, messagerie, fichiers provenant
+                    d'Internet.</li>
+                <li><strong>Module 4 – Sécurité partout, tout le temps :</strong> poste de travail, réseau domestique,
+                    mobilité, objets connectés.</li>
+            </ul>
+            <p style="color: var(--slate); font-size: 0.88rem; font-style: italic;">
+                Validation via QCM (micro-certification OpenBadge délivrée par l'ANSSI pour les étudiants obtenant plus
+                de 75%).
+            </p>
+        </div>
+
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 10px 0;">
+            <h3 style="color: #fff; margin-top: 0;">2. Travail de groupe – Oral : Lot C – Découverte de machines</h3>
+            <p style="color: var(--slate);">
+                En groupe de 4 étudiants, nous avons travaillé sur le <strong>Lot C</strong> : décrire et mettre en
+                œuvre les outils permettant de reconnaître les machines d'un réseau et d'en analyser les services
+                exposés. Mon travail personnel a porté sur :
+            </p>
+            <ul style="color: var(--slate); padding-left: 20px; line-height: 1.7;">
+                <li><strong>Découverte des machines du réseau</strong> avec <code
+                        style="background:rgba(100,255,218,0.1); padding: 1px 6px; border-radius: 3px;">nmap -sn 192.168.x.0/24</code>
+                </li>
+                <li><strong>Fingerprint OS</strong> (identification du système d'exploitation distant) avec <code
+                        style="background:rgba(100,255,218,0.1); padding: 1px 6px; border-radius: 3px;">nmap -O</code>
+                </li>
+                <li><strong>Découverte des services</strong> en écoute sur une machine distante avec <code
+                        style="background:rgba(100,255,218,0.1); padding: 1px 6px; border-radius: 3px;">nmap -sV</code>
+                </li>
+                <li><strong>Détection des versions</strong> des services et compréhension du mécanisme de « banner
+                    grabbing »</li>
+            </ul>
+            <p style="color: var(--slate);">Ces outils sont légalement utilisés dans un cadre autorisé (réseau de l'IUT)
+                et constituent la base de toute démarche d'audit ou de pentesting.</p>
+        </div>
+
+        <div class="reflexion-box"
+            style="background: var(--card); padding: 25px; border-radius: 8px; border-left: 4px solid var(--cyan); margin: 10px 0;">
+            <h3 style="color: #fff; margin-top: 0;">3. TP Capture the Flag (CTF)</h3>
+            <p style="color: var(--slate);">
+                Ce TP de 2 heures nous a mis en situation d'<strong>exploration offensive contrôlée</strong> : il
+                s'agissait de trouver des « drapeaux » cachés sur des machines vulnérables en exploitant des failles de
+                sécurité connues.
+                Cette approche concrète m'a permis de comprendre, du point de vue de l'attaquant, pourquoi certaines
+                mauvaises configurations sont dangereuses.
+            </p>
+        </div>
+
+        <!-- Traces -->
+        <span class="section-label">Preuves et traces</span>
+        <div class="trace-card">
+            <h4>Présentation SAÉ 1.01 (cours du professeur Brisacier)</h4>
+            <p>Document de présentation décrivant les objectifs, lots et modalités d'évaluation de la SAÉ 1.01 –
+                disponible dans les ressources du cours.</p>
+        </div>
+        <div class="trace-card">
+            <h4>MOOC SecNumAcadémie – Certification ANSSI</h4>
+            <p>Validation complète des 4 modules du parcours SecNumAcadémie. Attestation de réussite disponible via le
+                portail de l'ANSSI (Open Badge Factory).</p>
+        </div>
+        <div class="trace-card">
+            <h4>Notice technique – Lot C (document collaboratif de groupe)</h4>
+            <p>Document produit en groupe présentant les commandes Nmap, les mécanismes de fingerprinting OS et la
+                détection des versions de services. Présenté lors de l'oral noté.</p>
+        </div>
+
+        <!-- Autoévaluation -->
+        <span class="section-label">Autoévaluation</span>
+        <div class="autoeval-box">
+            <h3>Retour réflexif sur la SAÉ 1.01</h3>
+            <p style="color: var(--slate);">
+                <strong>Points forts :</strong> La densité du MOOC m'a forcé à une lecture active et à prendre des notes
+                structurées, compétence que je n'avais pas développée en lycée. La découverte de Nmap en pratique (et
+                non seulement en théorie) a été particulièrement marquante : voir en temps réel les ports ouverts d'une
+                machine cible rend les concepts abstraits de la cybersécurité soudainement très concrets.
+            </p>
+            <p style="color: var(--slate);">
+                <strong>Difficultés rencontrées :</strong> Le Module 2 du MOOC (authentification) a nécessité plusieurs
+                relectures, notamment les parties sur la cryptographie asymétrique et la gestion des clés. Pour l'oral,
+                la préparation en autonomie (12h sans encadrant) m'a demandé un effort d'organisation personnelle
+                inhabituel.
+            </p>
+            <p style="color: var(--slate);">
+                <strong>Ce que j'aurais pu améliorer :</strong> Aller plus loin dans le CTF – par manque de temps, je
+                n'ai pas exploré toutes les pistes. Je souhaite approfondir ces techniques lors du parcours Cyber en 2A
+                (SAÉ 3.Cyber.04 – Pentesting).
+            </p>
+
+            <p style="color: var(--slate); margin-top: 15px;"><strong>Niveau de maîtrise estimé :</strong></p>
+            <div class="niveau-row">
+                <span class="niveau-label">AC11.04 – Systèmes d'exploitation (Linux)</span>
+                <div class="niveau-bg">
+                    <div class="niveau-fill" style="width: 60%"></div>
+                </div>
+                <span style="color: var(--cyan); font-size: 0.8rem; min-width:60px;">En cours</span>
+            </div>
+            <div class="niveau-row">
+                <span class="niveau-label">AC11.05 – Identifier dysfonctionnements réseau</span>
+                <div class="niveau-bg">
+                    <div class="niveau-fill" style="width: 55%"></div>
+                </div>
+                <span style="color: var(--cyan); font-size: 0.8rem; min-width:60px;">En cours</span>
+            </div>
+            <div class="niveau-row">
+                <span class="niveau-label">AC13.01 – Utiliser outils système (Nmap, CLI…)</span>
+                <div class="niveau-bg">
+                    <div class="niveau-fill" style="width: 70%"></div>
+                </div>
+                <span style="color: #64ffda; font-size: 0.8rem; min-width:60px;">Acquis</span>
+            </div>
+
+            <p style="color: var(--slate); margin-top: 15px; font-style: italic;">
+                Cette SAÉ m'a confirmé que la cybersécurité est le domaine que je souhaite approfondir. Elle pose les
+                bases théoriques (MOOC ANSSI) et pratiques (Nmap, CTF) qui seront directement réinvesties dans le
+                parcours Cyber du BUT.
+            </p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="quick-nav"
+            style="display: flex; gap: 10px; margin-top: 40px; flex-wrap: wrap; justify-content: center;">
+            <a href="sae11.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: var(--cyan); color: var(--bg);">SAÉ
+                1</a>
+            <a href="sae12.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                2</a>
+            <a href="sae13.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                3</a>
+            <a href="sae14.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                4</a>
+            <a href="sae15.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">SAÉ
+                5</a>
+            <a href="bilans.html" class="btn-cv"
+                style="text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; border: 1px solid var(--cyan); background: transparent; color: var(--cyan);">Bilans</a>
         </div>
     </section>
 
@@ -56,10 +309,11 @@
             <p>Me contacter :</p>
             <ul>
                 <li>Par mail : <a href="mailto:duboislucas14210@gmail.com">duboislucas14210@gmail.com</a></li>
-                <li>Mon : <a href="https://www.linkedin.com/in/lucas-dubois-a921353a0" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/lucas-dubois-a921353a0" target="_blank">LinkedIn</a></li>
             </ul>
         </div>
-        <p>&copy; 2026 - Lucas DUBOIS - BUT Réseaux et Télécommunications IUT de Caen</p>
+        <p>&copy; 2026 – Lucas DUBOIS – BUT Réseaux et Télécommunications · IUT de Caen</p>
     </footer>
 </body>
+
 </html>
